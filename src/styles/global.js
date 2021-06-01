@@ -2,6 +2,12 @@ import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
   :root {
+    --color-background: #1c2135;
+    --color-primary-light: #e7e9ee;
+    --color-primary: #d8cdb0;
+    --color-secondary-light: #8794c0;
+    --color-secondary: #5a6794;
+
     font-size: 60%;
   }
   * {
@@ -11,8 +17,8 @@ export default createGlobalStyle`
     outline: 0;
   }
   body {
-    background: #F5F8FA;
-    color: #123952;
+    background: var(--color-background);
+    color: var(--color-primary-light);
     -webkit-font-smoothing: antialiased !important;
     text-rendering: optimizeLegibility !important;
   }
