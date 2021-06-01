@@ -1,13 +1,15 @@
 import React, { useState, useCallback } from 'react';
+import { Link } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 
-import { Container, Content, Log, Keyboard } from './styles';
+import { Container, Header, Content, Log, Keyboard } from './styles';
 
 const Calculator = () => {
   const [num1, setNum1] = useState('');
   const [num2, setNum2] = useState('');
   const [typeCalc, setTypeCalc] = useState('');
   const [result, setResult] = useState();
+  const [percentual, setPercentual] = useState('');
 
   const handleNumberButton = useCallback(
     (id) => {
@@ -33,7 +35,13 @@ const Calculator = () => {
     }
   }, [num1, result]);
 
-  const handlePercentualButton = useCallback(() => {}, []);
+  const handlePercentualButton = useCallback(() => {
+    if (!percentual) {
+      setPercentual('%');
+    } else {
+      setPercentual('');
+    }
+  }, [percentual]);
 
   const handleMultiplicationButton = useCallback(() => {
     if (num1) {
@@ -71,57 +79,111 @@ const Calculator = () => {
     }
   }, [num1, result]);
 
-  const handleBackSpaceButton = useCallback(() => {}, []);
+  const handleBackSpaceButton = useCallback(() => {
+    if (num1 && typeCalc && num2) {
+      setNum2('');
+    } else if (num1 && typeCalc) {
+      setTypeCalc('');
+    } else {
+      setNum1('');
+    }
+  }, [num1, typeCalc, num2]);
 
   const handleEqualButton = useCallback(() => {
     switch (typeCalc) {
       case '/':
-        setResult(Number(num1) / Number(num2));
-        setTypeCalc('');
-        setNum1('');
-        setNum2('');
+        if (!percentual) {
+          setResult(Number(num1) / Number(num2));
+          setTypeCalc('');
+          setNum1('');
+          setNum2('');
+        } else {
+          setResult(Number(num1) / (Number(num2) / 100));
+          setTypeCalc('');
+          setNum1('');
+          setNum2('');
+          setPercentual('');
+        }
         break;
 
       case 'x':
-        setResult(Number(num1) * Number(num2));
-        setTypeCalc('');
-        setNum1('');
-        setNum2('');
+        if (!percentual) {
+          setResult(Number(num1) * Number(num2));
+          setTypeCalc('');
+          setNum1('');
+          setNum2('');
+        } else {
+          setResult(Number(num1) * (Number(num2) / 100));
+          setTypeCalc('');
+          setNum1('');
+          setNum2('');
+          setPercentual('');
+        }
         break;
 
       case '+':
-        setResult(Number(num1) + Number(num2));
-        setTypeCalc('');
-        setNum1('');
-        setNum2('');
+        if (!percentual) {
+          setResult(Number(num1) + Number(num2));
+          setTypeCalc('');
+          setNum1('');
+          setNum2('');
+        } else {
+          setResult(Number(num1) + Number(num1) * (Number(num2) / 100));
+          setTypeCalc('');
+          setNum1('');
+          setNum2('');
+          setPercentual('');
+        }
         break;
 
       case '-':
-        setResult(Number(num1) - Number(num2));
-        setTypeCalc('');
-        setNum1('');
-        setNum2('');
+        if (!percentual) {
+          setResult(Number(num1) - Number(num2));
+          setTypeCalc('');
+          setNum1('');
+          setNum2('');
+        } else {
+          setResult(Number(num1) - Number(num1) * (Number(num2) / 100));
+          setTypeCalc('');
+          setNum1('');
+          setNum2('');
+          setPercentual('');
+        }
         break;
 
       default:
+        if (percentual) {
+          setResult(Number(num1) / 100);
+          setTypeCalc('');
+          setNum1('');
+          setNum2('');
+          setPercentual('');
+        }
         break;
     }
-  }, [num1, num2, typeCalc]);
+  }, [num1, num2, typeCalc, percentual]);
 
   const handleCleanButton = useCallback(() => {
     setNum1('');
     setNum2('');
     setTypeCalc('');
     setResult('');
+    setPercentual('');
   }, []);
 
   return (
     <Container>
+      <Header>
+        <Link to="/">Voltar para Home</Link>
+      </Header>
       <Content>
         <Log>
           <p id="number1">{num1}</p>
           <p>{typeCalc}</p>
-          <p>{num2}</p>
+          <p>
+            {num2}
+            {percentual}
+          </p>
           <p id="result">{result}</p>
         </Log>
         <Keyboard>
