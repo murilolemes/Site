@@ -1,8 +1,9 @@
 import React, { useState, useCallback } from 'react';
-import { Link } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 
-import { Container, Header, Content, Log, Keyboard } from './styles';
+import Header from '../../components/Header';
+
+import { Container, Content, Body, Log, Keyboard } from './styles';
 
 const Calculator = () => {
   const [num1, setNum1] = useState('');
@@ -173,96 +174,99 @@ const Calculator = () => {
 
   return (
     <Container>
-      <Header>
-        <Link to="/">Voltar para Home</Link>
-      </Header>
+      <Header />
       <Content>
-        <Log>
-          <p id="number1">{num1}</p>
-          <p>{typeCalc}</p>
-          <p>
-            {num2}
-            {percentual}
-          </p>
-          <p id="result">{result}</p>
-        </Log>
-        <Keyboard>
-          <div className="keyboardButtons">
-            <button type="button" onClick={() => handleCleanButton()}>
-              C
-            </button>
-            <button type="button" onClick={() => handleDivisionButton()}>
-              /
-            </button>
-            <button type="button" onClick={() => handlePercentualButton()}>
-              %
-            </button>
-            <button
-              type="button"
-              id="backSpace"
-              onClick={() => handleBackSpaceButton()}
-            >
-              <FiArrowLeft />
-            </button>
-          </div>
-          <div className="keyboardButtons">
-            <button type="button" onClick={() => handleNumberButton(7)}>
-              7
-            </button>
-            <button type="button" onClick={() => handleNumberButton(8)}>
-              8
-            </button>
-            <button type="button" onClick={() => handleNumberButton(9)}>
-              9
-            </button>
-            <button type="button" onClick={() => handleMultiplicationButton()}>
-              x
-            </button>
-          </div>
-          <div className="keyboardButtons">
-            <button type="button" onClick={() => handleNumberButton(4)}>
-              4
-            </button>
-            <button type="button" onClick={() => handleNumberButton(5)}>
-              5
-            </button>
-            <button type="button" onClick={() => handleNumberButton(6)}>
-              6
-            </button>
-            <button type="button" onClick={() => handleSomaButton()}>
-              +
-            </button>
-          </div>
-          <div className="keyboardButtons">
-            <button type="button" onClick={() => handleNumberButton(1)}>
-              1
-            </button>
-            <button type="button" onClick={() => handleNumberButton(2)}>
-              2
-            </button>
-            <button type="button" onClick={() => handleNumberButton(3)}>
-              3
-            </button>
-            <button type="button" onClick={() => handleSubtrationButton()}>
-              -
-            </button>
-          </div>
-          <div className="keyboardButtons">
-            <button type="button" onClick={() => handleNumberButton(0)}>
-              0
-            </button>
-            <button type="button" onClick={() => handleNumberButton('.')}>
-              .
-            </button>
-            <button
-              type="button"
-              id="equal"
-              onClick={() => handleEqualButton()}
-            >
-              =
-            </button>
-          </div>
-        </Keyboard>
+        <Body>
+          <Log>
+            <p id="number1">{num1}</p>
+            <p>{typeCalc}</p>
+            <p>
+              {num2}
+              {percentual}
+            </p>
+            <p id="result">{result}</p>
+          </Log>
+          <Keyboard>
+            <div className="keyboardButtons">
+              <button type="button" onClick={() => handleCleanButton()}>
+                C
+              </button>
+              <button type="button" onClick={() => handleDivisionButton()}>
+                /
+              </button>
+              <button type="button" onClick={() => handlePercentualButton()}>
+                %
+              </button>
+              <button
+                type="button"
+                id="backSpace"
+                onClick={() => handleBackSpaceButton()}
+              >
+                <FiArrowLeft />
+              </button>
+            </div>
+            <div className="keyboardButtons">
+              <button type="button" onClick={() => handleNumberButton(7)}>
+                7
+              </button>
+              <button type="button" onClick={() => handleNumberButton(8)}>
+                8
+              </button>
+              <button type="button" onClick={() => handleNumberButton(9)}>
+                9
+              </button>
+              <button
+                type="button"
+                onClick={() => handleMultiplicationButton()}
+              >
+                x
+              </button>
+            </div>
+            <div className="keyboardButtons">
+              <button type="button" onClick={() => handleNumberButton(4)}>
+                4
+              </button>
+              <button type="button" onClick={() => handleNumberButton(5)}>
+                5
+              </button>
+              <button type="button" onClick={() => handleNumberButton(6)}>
+                6
+              </button>
+              <button type="button" onClick={() => handleSomaButton()}>
+                +
+              </button>
+            </div>
+            <div className="keyboardButtons">
+              <button type="button" onClick={() => handleNumberButton(1)}>
+                1
+              </button>
+              <button type="button" onClick={() => handleNumberButton(2)}>
+                2
+              </button>
+              <button type="button" onClick={() => handleNumberButton(3)}>
+                3
+              </button>
+              <button type="button" onClick={() => handleSubtrationButton()}>
+                -
+              </button>
+            </div>
+            <div className="keyboardButtons">
+              <button type="button" onClick={() => handleNumberButton(0)}>
+                0
+              </button>
+              <button type="button" onClick={() => handleNumberButton('.')}>
+                .
+              </button>
+              <button
+                type="button"
+                id="equal"
+                onClick={() => handleEqualButton()}
+              >
+                =
+              </button>
+            </div>
+          </Keyboard>
+        </Body>
       </Content>
     </Container>
   );

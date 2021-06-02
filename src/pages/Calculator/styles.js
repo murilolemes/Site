@@ -3,18 +3,16 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
+`;
+
+export const Content = styled.div`
+  height: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
 
-export const Header = styled.div`
-  position: absolute;
-  top: 0;
-`;
-
-export const Content = styled.div`
+export const Body = styled.div`
   max-width: 350px;
   height: 500px;
   padding: 0 25px;
@@ -85,7 +83,7 @@ export const Keyboard = styled.div`
 
       &:hover {
         transform: translateY(-5px);
-        background: var(--color-secondary-light);
+        /* background: var(--color-secondary-light); */
         color: var(--color-primary);
       }
 
