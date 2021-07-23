@@ -7,7 +7,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   display: flex;
-  flex-direction: column;
+  align-items: center;
 `;
 
 export const Title = styled.div`
@@ -15,7 +15,29 @@ export const Title = styled.div`
   height: 80px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  color: var(--color-background);
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1,
+    p {
+      text-shadow: -1px 1px 4px var(--color-primary-light);
+    }
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    p {
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+  }
 `;
 
 export const NavBar = styled.div`
@@ -23,7 +45,8 @@ export const NavBar = styled.div`
   height: 40px;
   display: flex;
   align-items: center;
-  padding: 0 10px;
+  justify-content: flex-end;
+  /* padding: 0 10px; */
 
   ul {
     display: flex;
@@ -34,10 +57,10 @@ export const NavBar = styled.div`
     a {
       font-size: 1.8rem;
       font-weight: 500;
-      color: var(--color-primary-light);
+      color: var(--color-background);
       text-decoration: none;
-      border-bottom: 1px solid var(--color-primary-light);
-      box-shadow: 0 4px 5px -5px var(--color-primary-light);
+      /* border-bottom: 1px solid var(--color-primary); */
+      box-shadow: 0 5px 4px -5px var(--color-primary-light);
     }
 
     li {

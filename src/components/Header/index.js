@@ -8,7 +8,10 @@ const Header = () => (
   <Container>
     <Content>
       <Title>
-        <h1>Murilo Lemes</h1>
+        <div>
+          <h1>Murilo Lemes</h1>
+          <p>Desenvolvimeto Web</p>
+        </div>
       </Title>
       <NavBar>
         <ul>
