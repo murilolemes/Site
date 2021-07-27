@@ -21,6 +21,9 @@ const Header = () => (
           <li>
             <Link to="/calculator">Calculadora</Link>
           </li>
+          <li>
+            <Link to="/suporte">Sistema Chamado</Link>
+          </li>
         </ul>
       </NavBar>
     </Content>

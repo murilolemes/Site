@@ -8,6 +8,11 @@ export const Container = styled.div`
 export const Content = styled.div`
   display: flex;
   align-items: center;
+
+  @media (max-width: 599px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 export const Title = styled.div`
@@ -36,6 +41,21 @@ export const Title = styled.div`
     p {
       font-size: 1.8rem;
       font-weight: 500;
+    }
+  }
+
+  @media (max-width: 599px) {
+    justify-content: center;
+    height: 100%;
+
+    div {
+      h1 {
+        font-size: 2.4rem;
+      }
+
+      p {
+        font-size: 1.4rem;
+      }
     }
   }
 `;
@@ -71,6 +91,16 @@ export const NavBar = styled.div`
       }
       & + li {
         margin-left: 15px;
+      }
+    }
+  }
+
+  @media (max-width: 599px) {
+    justify-content: flex-start;
+
+    ul {
+      a {
+        font-size: 1.4rem;
       }
     }
   }
