@@ -7,6 +7,7 @@ export default createGlobalStyle`
     --color-primary: #d8cdb0;
     --color-secondary-light: #8794c0;
     --color-secondary: #5a6794;
+    --color-blue-facebook: #0676ff;
 
     font-size: 60%;
   }

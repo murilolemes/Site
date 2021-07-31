@@ -18,11 +18,12 @@ const Header = () => (
           <li>
             <Link to="/">Home</Link>
           </li>
+
           <li>
             <Link to="/calculator">Calculadora</Link>
           </li>
           <li>
-            <Link to="/suporte">Sistema Chamado</Link>
+            <Link to="/feedfacebook">Facebook</Link>
           </li>
         </ul>
       </NavBar>

@@ -4,7 +4,7 @@ import { CgCalculator } from 'react-icons/cg';
 
 import { Container, Content } from './styles';
 
-const Header = () => (
+const CardHome = () => (
   <Container>
     <Content>
       <div id="icon">
@@ -18,4 +18,4 @@ const Header = () => (
   </Container>
 );
 
-export default Header;
+export default CardHome;
