@@ -8,7 +8,8 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 100px;
 
   .header {
     width: 100%;
@@ -18,13 +19,16 @@ export const Content = styled.div`
     align-items: center;
     justify-content: center;
     background: ${shade(0.6, '#5a6794')};
+    position: fixed;
+    z-index: 1000;
   }
 
   .content {
     width: 100%;
     height: 100%;
     display: flex;
-    padding: 20px 5px;
+    position: absolute;
+    top: 56px;
   }
 `;
 
@@ -77,7 +81,7 @@ export const Search = styled.div`
 `;
 
 export const Status = styled.div`
-  width: 650px;
+  width: 700px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -93,6 +97,7 @@ export const Status = styled.div`
     &:hover {
       background: ${shade(0.3, '#5a6794')};
       border-bottom: 2px solid var(--color-blue-facebook);
+      border-radius: 10px 10px 0 0;
 
       svg {
         color: var(--color-blue-facebook);
@@ -115,6 +120,7 @@ export const Status = styled.div`
 
   .linkSelected {
     border-bottom: 2px solid var(--color-blue-facebook);
+    border-radius: 10px 10px 0 0;
 
     svg {
       color: var(--color-blue-facebook);

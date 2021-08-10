@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  width: 100%;
   padding: 10px;
   background: var(--color-secondary-light);
+  position: fixed;
+  z-index: 1000;
 `;
 
 export const Content = styled.div`
