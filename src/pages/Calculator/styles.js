@@ -6,10 +6,13 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  /* position: absolute;
+  top: 100px; */
+  margin: 100px 0;
 `;
 
 export const Body = styled.div`

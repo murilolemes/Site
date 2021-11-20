@@ -1,14 +1,22 @@
 import styled from 'styled-components';
+import { shade } from 'polished';
 
 export const Container = styled.div`
   width: 100%;
+  height: 100px;
   padding: 10px;
-  background: var(--color-secondary-light);
-  position: fixed;
-  z-index: 1000;
+  background: linear-gradient(
+    0,
+    var(--color-background),
+    var(--color-secondary)
+  );
+  /* position: fixed;
+  z-index: 1000; */
 `;
 
 export const Content = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
 
@@ -19,45 +27,40 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.div`
-  width: 100%;
+  width: 150px;
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   color: var(--color-background);
 
-  div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  a {
+    width: 100%;
+    height: 100%;
 
-    h1,
-    p {
-      text-shadow: -1px 1px 4px var(--color-primary-light);
-    }
+    img {
+      width: 150px;
+      height: 80px;
+      transition: 0.2s;
 
-    h1 {
-      font-size: 4rem;
-    }
-
-    p {
-      font-size: 1.8rem;
-      font-weight: 500;
+      &:hover {
+        width: 154px;
+        height: 84px;
+      }
     }
   }
 
   @media (max-width: 599px) {
-    justify-content: center;
-    height: 100%;
+    width: 90px;
+    height: 60px;
 
-    div {
-      h1 {
-        font-size: 2.4rem;
-      }
+    a {
+      width: 90px;
+      height: 60px;
 
-      p {
-        font-size: 1.4rem;
+      img {
+        width: 90px;
+        height: 60px;
       }
     }
   }
@@ -78,19 +81,22 @@ export const NavBar = styled.div`
     padding: 0;
 
     a {
-      font-size: 1.8rem;
+      font-size: 2rem;
       font-weight: 500;
-      color: var(--color-background);
+      color: var(--color-primary-light);
       text-decoration: none;
       /* border-bottom: 1px solid var(--color-primary); */
-      box-shadow: 0 5px 4px -5px var(--color-primary-light);
+      /* box-shadow: 0 5px 4px -5px var(--color-primary-light); */
     }
 
     li {
-      transition: 0.5s;
+      a {
+        transition: color 0.2s;
 
-      &:hover {
-        transform: translateY(-5px);
+        &:hover {
+          color: ${shade(0.2, '#e7e9ee')};
+          /* transform: translateY(-5px); */
+        }
       }
       & + li {
         margin-left: 15px;

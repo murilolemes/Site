@@ -2,6 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { FiArrowLeft } from 'react-icons/fi';
 
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 import { Container, Content, Body, Log, Keyboard } from './styles';
 
@@ -268,6 +269,7 @@ const Calculator = () => {
           </Keyboard>
         </Body>
       </Content>
+      <Footer />
     </Container>
   );
 };

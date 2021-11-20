@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { shade } from 'polished';
 
 export default createGlobalStyle`
   :root {
@@ -7,7 +8,6 @@ export default createGlobalStyle`
     --color-primary: #d8cdb0;
     --color-secondary-light: #8794c0;
     --color-secondary: #5a6794;
-    --color-blue-facebook: #0676ff;
 
     font-size: 60%;
   }
@@ -22,6 +22,18 @@ export default createGlobalStyle`
     color: var(--color-primary-light);
     -webkit-font-smoothing: antialiased !important;
     text-rendering: optimizeLegibility !important;
+    overflow-y: auto;
+    scrollbar-width: 1px;
+    ::-webkit-scrollbar-track {
+      background-color: ${shade(0.6, '#5a6794')};
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+      background: ${shade(0.6, '#5a6794')};
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--color-secondary-light);
+    }
   }
   html, body {
     height: 100vh;
