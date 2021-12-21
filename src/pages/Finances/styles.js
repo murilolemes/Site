@@ -2,11 +2,14 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Content = styled.div`
-  width: 100%;
+  width: 700px;
   padding: 50px 10px;
   display: flex;
   flex-direction: column;
@@ -15,7 +18,7 @@ export const Content = styled.div`
 `;
 
 export const CardContainer = styled.section`
-  width: 700px;
+  width: 100%;
   height: 110px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -49,7 +52,7 @@ export const Card = styled.div`
   }
   h1 {
     margin-top: 14px;
-    font-size: 3.7rem;
+    font-size: 3rem;
     font-weight: normal;
     line-height: 54px;
   }
@@ -66,81 +69,192 @@ export const Card = styled.div`
 `;
 
 export const InputContainer = styled.section`
-  width: 700px;
+  width: 100%;
   padding: 30px 0;
   margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
 
   h1 {
     width: 100%;
     text-align: center;
     font-size: 2rem;
+    margin-bottom: 10px;
   }
 `;
 
-export const Inputs = styled.div`
+export const DivForm = styled.div`
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 
-  div {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 32px;
+  form {
+    width: 100%;
 
-    .inputText {
-      width: 70%;
-      margin-right: 5px;
+    div {
+      & + div {
+        margin-top: 10px;
+      }
     }
 
-    .inputValue {
-      flex: 1;
+    #divRadioAndButton {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .inputsRadio {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        label {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.8rem;
+
+          & + label {
+            margin-left: 20px;
+          }
+
+          input {
+            width: 16px;
+            height: 16px;
+            margin-right: 6px;
+          }
+
+          img {
+            width: 18px;
+            height: 18px;
+            margin-left: 5px;
+          }
+        }
+      }
     }
+  }
+`;
+
+export const ButtonAddFinance = styled.button`
+  width: 150px;
+  height: 40px;
+  background: var(--color-secondary);
+  border: none;
+  border-radius: 6px;
+  color: var(--color-primary-light);
+  font-size: 1.8rem;
+  transition: 0.2s;
+
+  &:hover {
+    background: var(--color-secondary-light);
   }
 `;
 
 export const TableContainer = styled.section`
-  width: 700px;
-  margin-top: 64px;
+  width: 100%;
+  height: 500px;
+  padding: 10px 0px;
+
   table {
     width: 100%;
     border-spacing: 0 8px;
+
     th {
       color: var(--color-secondary-light);
       font-weight: normal;
-      padding: 20px 32px;
+      padding: 20px 5px;
       text-align: left;
-      font-size: 16px;
+      font-size: 1.6rem;
       line-height: 24px;
     }
+
     td {
-      padding: 20px 32px;
+      padding: 20px 5px;
       border: 0;
       background: var(--color-primary-light);
-      font-size: 16px;
+      font-size: 1.6rem;
       font-weight: normal;
       color: var(--color-secondary-light);
+
       &.title {
         color: var(--color-secondary);
       }
+
       &.income {
         color: #12a454;
       }
+
       &.outcome {
         color: #e83f5b;
       }
     }
+
+    .trash {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background-color: var(--color-primary-light);
+        color: var(--color-secondary-light);
+
+        &:hover {
+          color: #e83f5b;
+        }
+      }
+    }
+
     td:first-child {
       border-radius: 8px 0 0 8px;
     }
+
     td:last-child {
       border-radius: 0 8px 8px 0;
+    }
+  }
+`;
+
+export const DivPages = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+
+  p {
+    margin: 0 1rem;
+  }
+
+  button {
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 0px;
+    color: var(--color-primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+
+    & + button {
+      margin-left: 1rem;
+    }
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+
+    :disabled {
+      opacity: 0.2;
+    }
+
+    :hover {
+      background: var(--color-secondary);
     }
   }
 `;

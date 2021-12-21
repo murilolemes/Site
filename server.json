@@ -1,0 +1,52 @@
+{
+  "serverFinances": [
+    {
+      "id": "eae49d63-2cdb-4779-b4bc-967f1c8ae3cb",
+      "title": "teste",
+      "transaction": "income",
+      "price": "10000",
+      "category": "testes",
+      "date": "2021-12-06"
+    },
+    {
+      "id": "f2a92b57-0f48-4bdf-af12-c5ee7bd1ca38",
+      "title": "teste",
+      "transaction": "outcome",
+      "price": "10",
+      "category": "testes",
+      "date": "2021-12-06"
+    },
+    {
+      "id": "0facf374-085a-4d3b-8b7e-94ca92ba35ed",
+      "title": "testse",
+      "transaction": "outcome",
+      "price": "132",
+      "category": "fsfafdsa",
+      "date": "2021-12-06"
+    },
+    {
+      "id": "23118a2d-3e5e-4d40-b22d-903de23f95b6",
+      "title": "testes",
+      "transaction": "income",
+      "price": "1001",
+      "category": "testes",
+      "date": "2021-12-07"
+    },
+    {
+      "id": "0292552c-7733-46a9-bffb-d0d2e7253c58",
+      "title": "testes",
+      "transaction": "outcome",
+      "price": "100",
+      "category": "testes",
+      "date": "2021-12-09"
+    },
+    {
+      "id": "d43658d0-60ea-4845-9091-43e0dae75f9f",
+      "title": "yrtr",
+      "transaction": "outcome",
+      "price": "1000",
+      "category": "tete",
+      "date": "2021-12-09"
+    }
+  ]
+}
