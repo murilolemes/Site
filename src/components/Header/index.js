@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import LogoMLDWEscuroSF from '../../assets/Logo_MLDW_Branco.png';
+import Logo1 from '../../assets/Logo1.png';
 
 import { Container, Content, Title, NavBar } from './styles';
 
@@ -10,7 +10,7 @@ const Header = () => (
     <Content>
       <Title>
         <Link to="/">
-          <img src={LogoMLDWEscuroSF} alt="Logo Murilo" />
+          <img src={Logo1} alt="Logo Murilo" />
         </Link>
       </Title>
       <NavBar>

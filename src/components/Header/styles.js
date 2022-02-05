@@ -3,7 +3,7 @@ import { shade } from 'polished';
 
 export const Container = styled.div`
   width: 100%;
-  height: 100px;
+  height: 170px;
   padding: 10px;
   background: linear-gradient(
     0,
@@ -27,8 +27,8 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.div`
-  width: 150px;
-  height: 80px;
+  width: 160px;
+  height: 160px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -40,27 +40,38 @@ export const Title = styled.div`
 
     img {
       width: 150px;
-      height: 80px;
-      transition: 0.2s;
+      height: 150px;
+      border-radius: 50%;
+      transition: 1s;
+      border-top: 3px solid var(--color-background);
+      border-right: 3px solid var(--color-background);
+      border-bottom: 3px solid var(--color-secondary-light);
+      border-left: 3px solid var(--color-secondary-light);
 
       &:hover {
-        width: 154px;
-        height: 84px;
+        width: 160px;
+        height: 160px;
+        transform: rotate(360deg);
       }
     }
   }
 
   @media (max-width: 599px) {
-    width: 90px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
 
     a {
-      width: 90px;
-      height: 60px;
+      width: 100%;
+      height: 100%;
 
       img {
-        width: 90px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
+
+        &:hover {
+          width: 100px;
+          height: 100px;
+        }
       }
     }
   }
