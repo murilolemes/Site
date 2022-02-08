@@ -10,13 +10,11 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* position: absolute;
-  top: 100px; */
   margin: 100px 0;
 `;
 
 export const Body = styled.div`
-  max-width: 350px;
+  max-width: 400px;
   height: 500px;
   padding: 0 25px;
   display: flex;
@@ -24,16 +22,14 @@ export const Body = styled.div`
   align-items: center;
   border-radius: 7px;
   border: 1px solid var(--color-secondary-light);
-  box-shadow: 0 0 20px 10px var(--color-secondary-light);
 `;
 
 export const Log = styled.div`
   width: 100%;
   height: 150px;
   margin-top: -50px;
-  background: var(--color-secondary);
+  background: var(--color-background);
   border: 1px solid var(--color-secondary-light);
-  box-shadow: 0 0 5px 1px var(--color-secondary-light);
   border-radius: 7px;
   display: flex;
   flex-direction: column;
@@ -46,7 +42,6 @@ export const Log = styled.div`
     text-align: center;
     font-size: 1.8rem;
     font-weight: 500;
-    /* color: var(--color-primary-light); */
 
     & + p {
       margin-top: 5px;
@@ -72,11 +67,10 @@ export const Keyboard = styled.div`
     justify-content: center;
 
     button {
-      width: 46px;
+      width: 60px;
       height: 50px;
-      background: var(--color-secondary);
+      background: var(--color-background);
       border: 1px solid var(--color-secondary-light);
-      box-shadow: 0 0 5px 1px var(--color-secondary-light);
       border-radius: 7px;
       transition: 0.5s;
       font-size: 2rem;
@@ -86,17 +80,17 @@ export const Keyboard = styled.div`
 
       &:hover {
         transform: translateY(-5px);
-        /* background: var(--color-secondary-light); */
-        color: var(--color-primary);
+        background: var(--color-secondary-light);
+        color: var(--color-background);
       }
 
       & + button {
-        margin-left: 10px;
+        margin-left: 20px;
       }
     }
 
     & + .keyboardButtons {
-      margin-top: 15px;
+      margin-top: 20px;
     }
 
     #backSpace {

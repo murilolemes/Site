@@ -76,6 +76,8 @@ const Finances = () => {
 
   async function handleSubmit(data, { reset }) {
     try {
+      setUpdateData(false);
+
       const schema = Yup.object().shape({
         titleFinance: Yup.string().required('Título é obrigatório'),
         priceFinance: Yup.string().required('Valor é obrigatório'),

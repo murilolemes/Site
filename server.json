@@ -47,6 +47,22 @@
       "price": "1000",
       "category": "tete",
       "date": "2021-12-09"
+    },
+    {
+      "id": "8931cdbc-f357-4068-bab3-4de31c9faa7d",
+      "title": "teste 1",
+      "transaction": "income",
+      "price": "100",
+      "category": "teste 1",
+      "date": "2022-02-08"
+    },
+    {
+      "id": "369dbf66-a41b-4dbe-aec5-8836c5e1f647",
+      "title": "testes",
+      "transaction": "outcome",
+      "price": "10",
+      "category": "teste",
+      "date": "2022-02-08"
     }
   ]
 }

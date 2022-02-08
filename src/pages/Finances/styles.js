@@ -9,7 +9,8 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  width: 700px;
+  max-width: 700px;
+  width: 100%;
   padding: 50px 10px;
   display: flex;
   flex-direction: column;
@@ -23,6 +24,11 @@ export const CardContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 32px;
+
+  @media (max-width: 425px) {
+    grid-template-columns: repeat(1, 1fr);
+    height: 350px;
+  }
 `;
 
 export const Card = styled.div`
@@ -65,6 +71,10 @@ export const Card = styled.div`
   }
   .total {
     color: var(--color-primary-light);
+  }
+
+  @media (max-width: 425px) {
+    height: 100px;
   }
 `;
 
