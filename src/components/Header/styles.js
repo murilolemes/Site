@@ -28,13 +28,13 @@ export const Title = styled.div`
   color: var(--color-background);
 
   a {
-    width: 100%;
-    height: 100%;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
 
     img {
-      width: 150px;
-      height: 150px;
+      width: 100%;
+      height: 100%;
       border-radius: 50%;
       transition: 0.6s;
       border-top: 3px solid var(--color-background);

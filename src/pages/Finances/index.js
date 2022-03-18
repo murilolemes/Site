@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.min.css';
 
 import Input from '../../components/Form/input';
 import api from '../../services/api';
+import '../../services/server';
 import { getBalance } from '../../utils/getBalance';
 import { formatValue } from '../../utils/formatValue';
 
@@ -42,16 +43,16 @@ const Finances = () => {
 
   useEffect(() => {
     async function loadTransactions() {
-      const response = await api.get('/serverFinances');
+      const response = await api.get('/transactions');
 
-      const servers = response.data;
+      const servers = response.data.transactions;
       const transactonsFormatted = servers.map((server) => ({
         ...server,
         formattedValue: formatValue(server.price),
       }));
 
       setTransactions(transactonsFormatted);
-      const gBalance = getBalance(response.data);
+      const gBalance = getBalance(response.data.transactions);
 
       const balanceFormatted = {
         income: formatValue(gBalance.income),
@@ -98,7 +99,7 @@ const Finances = () => {
         date: data.dateFinance,
       };
 
-      await api.post('/serverFinances', dataServer);
+      await api.post('/transactions', dataServer);
 
       reset();
     } catch (err) {
@@ -137,7 +138,7 @@ const Finances = () => {
   async function handleDelete(id) {
     setUpdateData(false);
 
-    await api.delete(`/serverFinances/${id}`);
+    await api.delete(`/transactions/${id}`);
   }
 
   return (

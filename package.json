@@ -50,7 +50,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "7.21.5",
     "eslint-plugin-react-hooks": "^4.2.1-beta-ca106a02d-20211125",
-    "json-server": "^0.17.0",
+    "miragejs": "^0.1.43",
     "prettier": "^2.3.0"
   }
 }
