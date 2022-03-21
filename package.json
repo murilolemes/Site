@@ -10,6 +10,7 @@
     "@unform/web": "^2.1.6",
     "axios": "^0.24.0",
     "bootstrap": "4.6.0",
+    "miragejs": "^0.1.43",
     "polished": "^3.6.5",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
@@ -50,7 +51,6 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "7.21.5",
     "eslint-plugin-react-hooks": "^4.2.1-beta-ca106a02d-20211125",
-    "miragejs": "^0.1.43",
     "prettier": "^2.3.0"
   }
 }
