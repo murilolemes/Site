@@ -57,8 +57,8 @@ export const Title = styled.div`
       height: 100%;
 
       img {
-        width: 80px;
-        height: 80px;
+        width: 100%;
+        height: 100%;
       }
     }
   }
@@ -103,7 +103,7 @@ export const NavBar = styled.div`
   }
 
   @media (max-width: 599px) {
-    justify-content: flex-start;
+    justify-content: center;
 
     ul {
       a {

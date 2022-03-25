@@ -25,7 +25,7 @@ export const CardContainer = styled.section`
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 32px;
 
-  @media (max-width: 425px) {
+  @media (max-width: 599px) {
     grid-template-columns: repeat(1, 1fr);
     height: 350px;
   }
